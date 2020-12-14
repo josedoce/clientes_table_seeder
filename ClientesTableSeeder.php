@@ -34,7 +34,7 @@ class ClientesTableSeeder extends Seeder{
                 $nome = $baseNomes[$chaveNome];
                 $sobrenome = $baseSobrenomes[$chaveSobreNome];
                 $cidade = $baseCidade[rand(0, count($baseCidade)-1)];
-                $email = $baseNomes[$chaveNome].'_'.rand(1, 1000).$baseSobrenomes[$chaveSobreNome].'@gmail.com';
+                $email = strtolower($baseNomes[$chaveNome].'_'.rand(1, 1000).$baseSobrenomes[$chaveSobreNome].'@gmail.com');
             	$nascimento = $ano."-".$mes."-".$dia; // formato Y/M/D
                 $dados = [
                 	'nome'=>$nome,
